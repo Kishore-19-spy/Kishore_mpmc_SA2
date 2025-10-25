@@ -6,24 +6,27 @@ To write a assembly language program for 8051 to generate a 100 ms delay using t
 Keil µVision IDE
 Personel computer
 ## ALGORITHM
-Start program execution at address 0000H.
+1.Start program execution at address 0000H.
 
-Set Timer 1 in mode 2 (8-bit auto-reload mode).
+2.Set Timer 1 in mode 2 (8-bit auto-reload mode).
 
-Load the timer high register (TH1) with 00H.
+3.Load the timer high register (TH1) with 00H.
 
-Initialize outer loop counter (R6) to 2.
+4.Initialize outer loop counter (R6) to 2.
 
-For each outer loop:
+5.For each outer loop:
 
-Initialize inner loop counter (R5) to 196.
-Start Timer 1 and wait until it overflows (TF1 = 1).
-Stop and clear the timer, then repeat until R5 = 0.
-Toggle the bit P2.5 after each full inner loop.
+i) Initialize inner loop counter (R5) to 196.
 
-Decrease R6 and repeat outer loop until R6 = 0.
+ii) Start Timer 1 and wait until it overflows (TF1 = 1).
 
-Jump back to the beginning to repeat the entire process continuously.
+iii) Stop and clear the timer, then repeat until R5 = 0.
+
+6.Toggle the bit P2.5 after each full inner loop.
+
+7.Decrease R6 and repeat outer loop until R6 = 0.
+
+8.Jump back to the beginning to repeat the entire process continuously.
 
 ## PROGRAM
 ```.a51
