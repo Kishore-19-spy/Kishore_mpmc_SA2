@@ -51,6 +51,8 @@ END
 ```
 ## OUTPUT
 
+<img width="1536" height="853" alt="image" src="https://github.com/user-attachments/assets/36f3ab8e-0d39-403e-a81c-037c3cbb4910" />
+
 
 ## RESULT
 The 8051 program to generate a 100ms delay using timer 1 in mode 2 and toggle port 2.5 continuously is successful.
